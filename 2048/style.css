@@ -1,0 +1,125 @@
+html, body {
+    margin: none;
+    background-color: #2e2e2e;
+}
+
+.tiles {
+    display: block;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: #4F4F4F;
+}
+
+.row {
+    height: 25%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tile {
+    width: 25%;
+    max-height: 100%;
+    margin: 5px;
+    background-color: #C4C4C4;
+    border-radius: 7%;
+}
+
+.tile > div {
+    width: 100%;
+    height: 100%;
+    border-radius: 4%;
+    position: relative;
+    color: #C4C4C4;
+    font-size: 20px;
+    font-family: monospace;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tile > .\32::before {
+    content: "2";
+}
+.tile > .\32  {
+    background-color: rgb(64, 64, 121);
+}
+
+.tile > .\34::before {
+    content: "4";
+}
+.tile > .\34 {
+    background-color: rgb(64, 84, 121);
+}
+
+.tile > .\38::before {
+    content: "8";
+}
+.tile > .\38 {
+    background-color: rgb(64, 104, 121);
+}
+
+.move .tile > .slide {
+    animation-duration: 3s;
+    animation-timing-function: ease;
+}
+
+.move .tile > .slide-up-1 {
+    animation-name: slide-up-1;
+}
+@keyframes slide-up-1 {
+    0% {bottom: 0px;}
+    20% {bottom: 125px;}
+    100% {bottom: 125px;}
+}
+.move .tile > .slide-up-2 {
+    animation-name: slide-up-2;
+}
+@keyframes slide-up-2 {
+    0% {bottom: 0px;}
+    20% {bottom: 250px;}
+    100% {bottom: 250px;}
+}
+.move .tile > .slide-up {
+    animation-name: slide-up;
+}
+@keyframes slide-up {
+    0% {bottom: 0px;}
+    20% {bottom: 125px;}
+    100% {bottom: 125px;}
+}
+
+.move .tile > .slide-right-1 {
+    animation-name: slide-right-1;
+}
+@keyframes slide-right-1 {
+    0% {left: 0px;}
+    20% {left: 125px;}
+    100% {left: 125px;}
+}
+.move .tile > .slide-right-2 {
+    animation-name: slide-right-2;
+}
+@keyframes slide-right-2 {
+    0% {left: 0px;}
+    20% {left: 250px;}
+    100% {left: 250px;}
+}
+
+.move .tile > .slide-down {
+    animation-name: slide-down;
+}
+@keyframes slide-down {
+    0% {top: 0px;}
+    20% {top: 125px;}
+    100% {top: 125px;}
+}
+
+.move .tile > .slide-left {
+    animation-name: slide-left;
+}
+@keyframes slide-left {
+    0% {right: 0px;}
+    10% {right: 125px;}
+    100% {right: 125px;}
+}
